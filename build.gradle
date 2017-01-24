@@ -30,7 +30,7 @@ repositories {
 }
 
 dependencies {
-    compile group: 'org.sosy_lab', name: 'javasmt', version: '1.0.1-60-g9a31f2a', configuration: 'runtime'
+    compile group: 'org.sosy_lab', name: 'javasmt', version: 'latest.integration', configuration: 'runtime'
 }
 artifacts {
     archives shadowJar
