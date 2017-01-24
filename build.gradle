@@ -32,7 +32,7 @@ artifacts {
 uploadArchives {
     repositories {
         mavenDeployer {
-            repository(url: "http://maven.tangentmc.net/repository/victoria") {
+            repository(url: "https://maven.tangentmc.net/repository/victoria") {
                 authentication(userName: mavenUser, password: mavenPassword)
             }
             //Skip copying dependencies as we shade them ourselves.
