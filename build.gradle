@@ -7,14 +7,11 @@ version '1.0.2'
 
 apply plugin: 'java'
 apply plugin: 'maven'
-apply plugin: 'application'
 apply plugin: 'com.github.johnrengelman.shadow'
 shadowJar {
     baseName = 'java-smt'
     classifier = ''
 }
-sourceCompatibility = 1.8
-mainClassName = 'mc.Main'
 repositories {
     mavenCentral()
     ivy {
@@ -35,9 +32,10 @@ artifacts {
 uploadArchives {
     repositories {
         mavenDeployer {
-            repository(url: "http://192.168.2.187:8081/repository/victoria") {
+            repository(url: "http://maven.tangentmc.net/repository/victoria") {
                 authentication(userName: mavenUser, password: mavenPassword)
             }
+            //Skip copying dependencies as we shade them ourselves.
             pom.whenConfigured {
                 p -> p.dependencies = []
             }
