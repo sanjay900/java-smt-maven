@@ -17,9 +17,6 @@ sourceCompatibility = 1.8
 mainClassName = 'mc.Main'
 repositories {
     mavenCentral()
-    maven {
-        url "http://logicrunch.it.uu.se:4096/~wv/maven/"
-    }
     ivy {
         url 'https://www.sosy-lab.org/ivy/'
         layout "pattern", {
